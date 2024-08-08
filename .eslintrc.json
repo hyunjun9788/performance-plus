@@ -20,6 +20,7 @@
     "react/jsx-no-useless-fragment": "off",
     "react/jsx-props-no-spreading": "off",
     "no-console": "error",
+    "jsx-a11y/mouse-events-have-key-events": "off",
     "prettier/prettier": [
       "error",
       {
