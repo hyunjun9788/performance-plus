@@ -6,6 +6,7 @@ import MusicIcon from '../../../public/music-solid.svg';
 import ReviewIcon from '../../../public/pen-solid.svg';
 import MusicalIcon from '../../../public/people-pulling-solid.svg';
 import PlayIcon from '../../../public/people-roof-solid.svg';
+import MapIcon from '../../../public/map-solid.svg';
 
 export const iconTypes: Record<
   IconType,
@@ -18,6 +19,7 @@ export const iconTypes: Record<
   SearchIcon,
   PlayIcon,
   MusicalIcon,
+  MapIcon,
 };
 
 export const Icon = ({ name, className, onClick }: IconProps) => {

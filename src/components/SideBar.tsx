@@ -14,11 +14,17 @@ const SideBar = () => {
               <MenuItem icon="PlayIcon" text="연극" />
             </ul>
           </div>
-          <div>
-            <h3 className="text-[15px] font-bold">커뮤니티</h3>
-            <ul className="text-[17px]">
-              <li>공연 후기</li>
-              <li>자유게시판</li>
+          <div className="flex flex-col gap-2">
+            <h3 className="pl-3 text-[15px] font-bold">커뮤니티</h3>
+            <ul className="flex flex-col gap-1 text-[17px]">
+              <MenuItem icon="ReviewIcon" text="공연 후기" />
+              <MenuItem icon="NoticeIcon" text="자유게시판" />
+            </ul>
+          </div>
+          <div className="flex flex-col gap-2">
+            <h3 className="pl-3 text-[15px] font-bold">지도</h3>
+            <ul className="flex flex-col gap-1 text-[17px]">
+              <MenuItem icon="MapIcon" text="공연장 위치" />
             </ul>
           </div>
           <div />
