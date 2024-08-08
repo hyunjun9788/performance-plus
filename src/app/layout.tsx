@@ -3,6 +3,7 @@ import '../styles/global.css';
 import localFont from 'next/font/local';
 import Gnb from '@/components/Gnb';
 import SideBar from '@/components/SideBar';
+import RecoilRootWrapper from '@/recoil/RecoilWrapper';
 
 export const metadata: Metadata = {
   title: '공연플러스',
@@ -24,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="ko" className={pretendard.className}>
       <body className={`${pretendard.variable} font-pretendard`}>
-        <Gnb />
-        <SideBar />
-        {children}
+        <RecoilRootWrapper>
+          <Gnb />
+          <SideBar />
+          {children}
+        </RecoilRootWrapper>
       </body>
     </html>
   );
