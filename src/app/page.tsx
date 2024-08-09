@@ -1,3 +1,11 @@
-export default function Home() {
-  return <div className="text-main">안녕하세요</div>;
+import Banner from '@/components/Banner';
+
+function Home() {
+  return (
+    <main>
+      <Banner />
+    </main>
+  );
 }
+
+export default Home;

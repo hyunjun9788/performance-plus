@@ -7,10 +7,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'main': "#39FF14",
+        'main': "#98FF98",
+        'dark-main': "#3CB371",
+        'gray-bf': "#BFBFBF",
+        'gray-36': "#363636",
+        'gray-70': "#707070",
+        'gray-97': "#979797"
       },
     },
   },
+  mode: "jit",
   plugins: [],
 }
 
