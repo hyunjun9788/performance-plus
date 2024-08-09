@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { IconType } from '@/types/iconType';
+import { usePathname } from 'next/navigation';
 import MenuItem from './MenuItem';
 
 interface MenuItems {
@@ -20,7 +21,7 @@ interface MenuSection {
 const SideBar = () => {
   const [isHoveringSideBar, setIsHoveringSideBar] = useState(false);
   const [isHoveringButton, setIsHoveringButton] = useState(false);
-  const [currentPath, setCurrentPath] = useState('/');
+  const pathname = usePathname();
 
   const handleSideBarMouseEnterOrLeave = () => {
     setIsHoveringSideBar(!isHoveringSideBar);
@@ -28,10 +29,6 @@ const SideBar = () => {
 
   const handleButtonMouseEnterOrLeave = () => {
     setIsHoveringButton(!isHoveringButton);
-  };
-
-  const handleClickMenu = (path: string) => {
-    setCurrentPath(path);
   };
 
   const isDisplayFoldBtn =
@@ -83,8 +80,7 @@ const SideBar = () => {
                       icon={item.icon}
                       text={item.text}
                       path={item.path}
-                      onClickMenu={() => handleClickMenu(item.path)}
-                      isClicked={currentPath === item.path}
+                      isClicked={pathname === item.path}
                     />
                   ))}
                 </ul>

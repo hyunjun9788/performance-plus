@@ -6,21 +6,13 @@ interface MenuItemProps {
   icon: IconType;
   text: string;
   path: string;
-  onClickMenu: () => void;
   isClicked: boolean;
 }
-const MenuItem = ({
-  icon,
-  text,
-  path,
-  onClickMenu,
-  isClicked,
-}: MenuItemProps) => {
+const MenuItem = ({ icon, text, path, isClicked }: MenuItemProps) => {
   const clickedMenuStyle = isClicked ? 'bg-gray-36' : '';
   return (
     <li className="hover:bg-gray-36 rounded-lg duration-150">
       <Link
-        onClick={onClickMenu}
         href={path}
         className={`w-full flex items-center px-3 py-2 gap-4 rounded-lg ${clickedMenuStyle}`}
       >
