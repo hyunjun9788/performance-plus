@@ -4,6 +4,9 @@
   html {
     background: #000000;
   }
+  h1 {
+    @apply text-[44px];
+  }
 }
 
 /* reset */
