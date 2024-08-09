@@ -3,7 +3,7 @@ import { HTMLAttributes } from 'react';
 export type IconType =
   | 'HomeIcon'
   | 'ReviewIcon'
-  | 'NoticeIcon'
+  | 'BoardIcon'
   | 'MusicIcon'
   | 'SearchIcon'
   | 'PlayIcon'

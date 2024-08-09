@@ -1,6 +1,6 @@
 import { IconProps, IconType } from '@/types/iconType';
 import HomeIcon from '../../../public/house-solid.svg';
-import NoticeIcon from '../../../public/comment-solid.svg';
+import BoardIcon from '../../../public/comment-solid.svg';
 import SearchIcon from '../../../public/magnifying-glass-solid.svg';
 import MusicIcon from '../../../public/music-solid.svg';
 import ReviewIcon from '../../../public/pen-solid.svg';
@@ -14,7 +14,7 @@ export const iconTypes: Record<
 > = {
   HomeIcon,
   ReviewIcon,
-  NoticeIcon,
+  BoardIcon,
   MusicIcon,
   SearchIcon,
   PlayIcon,
