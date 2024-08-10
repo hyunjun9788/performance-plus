@@ -7,8 +7,15 @@ interface MenuItemProps {
   text: string;
   path: string;
   isClicked: boolean;
+  isClickedFoldButton: boolean;
 }
-const MenuItem = ({ icon, text, path, isClicked }: MenuItemProps) => {
+const MenuItem = ({
+  icon,
+  text,
+  path,
+  isClicked,
+  isClickedFoldButton,
+}: MenuItemProps) => {
   const clickedMenuStyle = isClicked ? 'bg-gray-36' : '';
   return (
     <li className="hover:bg-gray-36 rounded-lg duration-150">
@@ -17,7 +24,7 @@ const MenuItem = ({ icon, text, path, isClicked }: MenuItemProps) => {
         className={`w-full flex items-center px-3 py-2 gap-4 rounded-lg ${clickedMenuStyle}`}
       >
         <Icon name={icon} className="fill-gray-97 w-[20px]" />
-        {text}
+        <span className={`${isClickedFoldButton ? 'hidden' : ''}`}>{text}</span>
       </Link>
     </li>
   );

@@ -21,6 +21,8 @@ interface MenuSection {
 const SideBar = () => {
   const [isHoveringSideBar, setIsHoveringSideBar] = useState(false);
   const [isHoveringButton, setIsHoveringButton] = useState(false);
+  const [isClickedFoldButton, setIsClickedFoldButton] = useState(false);
+  console.log(isClickedFoldButton);
   const pathname = usePathname();
 
   const handleSideBarMouseEnterOrLeave = () => {
@@ -31,6 +33,9 @@ const SideBar = () => {
     setIsHoveringButton(!isHoveringButton);
   };
 
+  const handleClickFoldButton = () => {
+    setIsClickedFoldButton(true);
+  };
   const isDisplayFoldBtn =
     isHoveringSideBar || isHoveringButton
       ? 'opacity-100 transition-opacity duration-200 ease-in-out'
@@ -61,18 +66,25 @@ const SideBar = () => {
     },
   ];
 
+  const navClassName = isClickedFoldButton
+    ? 'w-[76px] p-2 duration-300'
+    : 'w-60 p-4 duration-300';
   return (
     <>
       <div>
         <nav
           onMouseEnter={handleSideBarMouseEnterOrLeave}
           onMouseLeave={handleSideBarMouseEnterOrLeave}
-          className="fixed top-0 bottom-0 z-50 w-60 p-4 mt-[87px] border-r border-gray-36 text-gray-97 bg-black"
+          className={`fixed top-0 bottom-0 z-50 mt-[87px] border-r border-gray-36 text-gray-97 bg-black ${navClassName}`}
         >
           <div className="flex flex-col gap-8">
             {menuSections.map((section) => (
               <div key={section.title} className="flex flex-col gap-2">
-                <h3 className="pl-3 text-[15px] font-bold">{section.title}</h3>
+                <h3
+                  className={`pl-3 text-[15px] font-bold ${isClickedFoldButton ? 'invisible h-[13px] ' : 'visible'}`}
+                >
+                  {section.title}
+                </h3>
                 <ul className="flex flex-col gap-1 text-[17px]">
                   {section.items.map((item) => (
                     <MenuItem
@@ -81,23 +93,25 @@ const SideBar = () => {
                       text={item.text}
                       path={item.path}
                       isClicked={pathname === item.path}
+                      isClickedFoldButton={isClickedFoldButton}
                     />
                   ))}
                 </ul>
               </div>
             ))}
           </div>
+          <Image
+            src={`${isClickedFoldButton ? '/no-fold.png' : '/fold.png'}`}
+            width="20"
+            height="60"
+            alt="접기 버튼"
+            className={`absolute top-1/2 right-[-21px] cursor-pointer ${isDisplayFoldBtn}`}
+            onClick={handleClickFoldButton}
+            onMouseEnter={handleButtonMouseEnterOrLeave}
+            onMouseLeave={handleButtonMouseEnterOrLeave}
+          />
         </nav>
       </div>
-      <Image
-        src="/fold.png"
-        width="20"
-        height="60"
-        alt="접기 버튼"
-        className={`absolute top-1/2 left-60 cursor-pointer ${isDisplayFoldBtn}`}
-        onMouseEnter={handleButtonMouseEnterOrLeave}
-        onMouseLeave={handleButtonMouseEnterOrLeave}
-      />
     </>
   );
 };
