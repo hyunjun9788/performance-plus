@@ -5,9 +5,15 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/app/**/*.{js,ts,jsx,tsx}',],
   theme: {
+    screens: {
+      mobile: { min: '320px', max: '767px' },
+      md: { min: '768px', max: '1023px' },
+      lg: { min: '1024px' },
+    },
     extend: {
       colors: {
-        'main': "#98FF98",
+        'main': "#39FF14",
+        'light-main': "#98FF98",
         'dark-main': "#3CB371",
         'gray-bf': "#BFBFBF",
         'gray-36': "#363636",

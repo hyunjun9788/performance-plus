@@ -19,6 +19,7 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-no-useless-fragment": "off",
     "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
     "no-console": "warn",
     "jsx-a11y/mouse-events-have-key-events": "off",
     "prettier/prettier": [
