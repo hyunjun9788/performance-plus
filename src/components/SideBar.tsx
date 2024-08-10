@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image';
-import { useState } from 'react';
 import { IconType } from '@/types/iconType';
 import { usePathname } from 'next/navigation';
 import MenuItem from './MenuItem';
@@ -19,22 +17,7 @@ interface MenuSection {
 }
 
 const SideBar = () => {
-  const [isHoveringSideBar, setIsHoveringSideBar] = useState(false);
-  const [isHoveringButton, setIsHoveringButton] = useState(false);
   const pathname = usePathname();
-
-  const handleSideBarMouseEnterOrLeave = () => {
-    setIsHoveringSideBar(!isHoveringSideBar);
-  };
-
-  const handleButtonMouseEnterOrLeave = () => {
-    setIsHoveringButton(!isHoveringButton);
-  };
-
-  const isDisplayFoldBtn =
-    isHoveringSideBar || isHoveringButton
-      ? 'opacity-100 transition-opacity duration-200 ease-in-out'
-      : 'opacity-0 transition-opacity duration-200 ease-in-out';
 
   const menuSections: MenuSection[] = [
     {
@@ -64,15 +47,13 @@ const SideBar = () => {
   return (
     <>
       <div>
-        <nav
-          onMouseEnter={handleSideBarMouseEnterOrLeave}
-          onMouseLeave={handleSideBarMouseEnterOrLeave}
-          className="fixed top-0 bottom-0 z-50 w-60 p-4 mt-[87px] border-r border-gray-36 text-gray-97 bg-black"
-        >
+        <nav className="fixed top-0 bottom-0 z-50 mt-[87px] border-r border-gray-36 text-gray-97 bg-black w-60 p-4 duration-300">
           <div className="flex flex-col gap-8">
             {menuSections.map((section) => (
               <div key={section.title} className="flex flex-col gap-2">
-                <h3 className="pl-3 text-[15px] font-bold">{section.title}</h3>
+                <h3 className={`pl-3 text-[15px] font-bold `}>
+                  {section.title}
+                </h3>
                 <ul className="flex flex-col gap-1 text-[17px]">
                   {section.items.map((item) => (
                     <MenuItem
@@ -89,15 +70,6 @@ const SideBar = () => {
           </div>
         </nav>
       </div>
-      <Image
-        src="/fold.png"
-        width="20"
-        height="60"
-        alt="접기 버튼"
-        className={`absolute top-1/2 left-60 cursor-pointer ${isDisplayFoldBtn}`}
-        onMouseEnter={handleButtonMouseEnterOrLeave}
-        onMouseLeave={handleButtonMouseEnterOrLeave}
-      />
     </>
   );
 };
