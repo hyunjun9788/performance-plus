@@ -46,7 +46,7 @@ iframe {
   @apply text-white;
 }
 .fc {
-  @apply w-[1200px];
+  @apply w-[1175px];
 }
 .fc .fc-toolbar.fc-header-toolbar {
   font-weight: 500;
