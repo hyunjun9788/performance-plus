@@ -10,7 +10,8 @@ export interface ImageProps {
 
 const typeClasses: Record<ImageProps['type'], string> = {
   home: 'relative w-full h-full aspect-[180/244]',
-  music: 'relative w-full h-full aspect-[251/398]',
+  music:
+    'relative w-full h-full aspect-[251/398] brightness-100 group-hover:brightness-75',
 };
 
 const ImageComponent = ({ type, src }: ImageProps) => {
