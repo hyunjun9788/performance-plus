@@ -1,5 +1,5 @@
 import { PerformanceInfo } from '@/constants/mockData';
-import Image from 'next/image';
+import ImageComponent from './common/ImageComponent';
 
 function PerformanceSection({
   title,
@@ -20,9 +20,7 @@ function PerformanceSection({
             className="max-w-[180px] max-h-[350px] flex flex-col gap-5"
             key={v.id}
           >
-            <div className="relative w-full h-full aspect-[180/244]">
-              <Image fill src={v.imageUrl} alt="공연 포스터" />
-            </div>
+            <ImageComponent src={v.imageUrl} type="home" />
             <div className="h-10 truncate w-full">{v.description}</div>
           </div>
         ))}
