@@ -1,8 +1,8 @@
-'use client';
+import Button, { ButtonKind } from './common/Button';
 
 const Banner = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-[450px] w-[calc(-240px+100vw)] mt-[87px] ml-[240px] bg-no-repeat bg-cover bg-center bg-opacity-50 bg-black bg-[url('../assets/images/banner.jpg')]">
+    <div className="flex flex-col justify-center items-center h-[450px] bg-no-repeat bg-cover bg-center bg-opacity-50 bg-black bg-[url('../assets/images/banner.jpg')]">
       <div className="h-[450px] absolute inset-0 mt-[87px] bg-black opacity-50" />
       <div className="flex flex-col items-center gap-6 z-10 text-center">
         <h1 className="text-white font-bold">
@@ -12,12 +12,9 @@ const Banner = () => {
           사용자들과 함께 공연 일정과 후기를 통해 <br /> 더욱 깊이 있는 문화
           경험과 새로운 영감을 얻아가세요.
         </p>
-        <button
-          type="button"
-          className="bg-main w-[400px] h-12 rounded-lg font-bold text-black hover:bg-dark-main"
-        >
+        <Button type="button" kind={ButtonKind.primary}>
           로그인하고 공연 후기 등록하러 가기
-        </button>
+        </Button>
       </div>
     </div>
   );

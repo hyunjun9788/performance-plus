@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import Logo from '../../public/logo.svg';
+import Image from 'next/image';
 
 const Gnb = () => {
   return (
     <header className="fixed top-0 left-0 w-full h-18 border-b border-gray-36 z-[999] bg-black">
       <div className="flex items-center justify-between px-8 py-4">
-        <div className="flex-1 flex justify-center">
+        <div className="flex justify-center">
           <Link href="/">
-            <Logo className="w-[130px] h-[55px]" />
+            <Image width={130} height={55} src="/logo.png" alt="로고 이미지" />
           </Link>
         </div>
         <button
