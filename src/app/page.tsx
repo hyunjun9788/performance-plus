@@ -11,7 +11,7 @@ function Home() {
       <main className="w-full">
         <Banner />
         <div className="flex justify-center">
-          <PerformanceSection title="대중음악" data={MUSIC_INFO} />
+          <PerformanceSection title="콘서트" data={MUSIC_INFO} />
           <PerformanceSection title="뮤지컬" data={MUSICAL_INFO} />
           <PerformanceSection title="연극" data={PLAY_INFO} />
         </div>

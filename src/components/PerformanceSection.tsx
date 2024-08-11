@@ -5,7 +5,7 @@ function PerformanceSection({
   title,
   data,
 }: {
-  title: string;
+  title: '콘서트' | '뮤지컬' | '연극';
   data: PerformanceInfo[];
 }) {
   return (
