@@ -9,12 +9,12 @@ function PerformanceSection({
   data: PerformanceInfo[];
 }) {
   return (
-    <div className="flex flex-col gap-3 px-[15px]">
+    <div className="max-w-[400px] flex flex-col flex-1 gap-3 px-[15px]">
       <div className="flex items-center">
         <span className="text-lg font-bold text-main">{title}</span>
         <div className="flex-grow h-px bg-gray-400 mx-4" />
       </div>
-      <div className="grid grid-cols-2 grid- gap-2 text-white">
+      <div className="grid grid-cols-2 gap-2 text-white">
         {data.map((v) => (
           <div
             className="max-w-[180px] max-h-[350px] flex flex-col gap-5"

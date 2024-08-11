@@ -42,5 +42,116 @@ iframe {
   border: 0;
 }
 
+.fc-toolbar-title {
+  @apply text-white;
+}
+.fc {
+  @apply w-[1200px];
+}
+.fc .fc-toolbar.fc-header-toolbar {
+  font-weight: 500;
+  border-radius: 20px;
+}
+.fc .fc-day-sun a {
+  color: red;
+}
+
+.fc .fc-day-sat a {
+  color: blue;
+}
+
+.fc .fc-toolbar-title {
+  font-weight: normal;
+  color: #87cdcf;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0;
+  padding: 0 40px;
+  background-color: #363636;
+  height: 60px;
+
+  font-size: 12px;
+  line-height: 30px;
+  color: #87cdcf;
+  border-radius: 20px 20px 0px 0px;
+}
+.fc .fc-timeGridWeek-button,
+.fc .fc-dayGridMonth-button,
+.fc .fc-timeGridDay-button {
+  @apply hidden;
+}
+
+.fc .fc-toolbar-chunk:nth-child(2) {
+  @apply flex flex-1;
+}
+
+.fc .fc-toolbar-chunk .fc-button {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+}
+
+.fc .fc-toolbar-chunk .fc-button:disabled {
+  color: #e8e8e8;
+}
+.fc .fc-toolbar-chunk .fc-button:disabled:hover {
+  background-color: transparent;
+}
+
+.fc .fc-toolbar-chunk .fc-button:focus {
+  box-shadow: none;
+}
+
+.fc .fc-toolbar-chunk .fc-button:hover {
+  background-color: #87cdcf;
+}
+
+.fc .fc-button-primary span {
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.fc-theme-standard th {
+  height: 40px;
+  background: #707070;
+  border: 1px solid #e8e8e8;
+  border-top: 0px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #bfbfbf;
+  vertical-align: middle;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: #e6895724;
+}
+
+.fc .fc-daygrid-day-frame {
+  padding: 10px;
+  background-color: #bfbfbf;
+}
+
+.fc .fc-daygrid-day-top {
+  flex-direction: row;
+  height: 30px;
+  margin-bottom: 3px;
+}
+
+.fc .fc-daygrid-day-number {
+  z-index: auto !important;
+}
+
+.fc-event {
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
 @tailwind components;
 @tailwind utilities;
