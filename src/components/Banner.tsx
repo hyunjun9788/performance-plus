@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-[450px] w-[calc(-240px+100vw)] bg-no-repeat bg-cover bg-center bg-opacity-50 bg-black bg-[url('../assets/images/banner.jpg')]">
+    <div className="flex flex-col justify-center items-center h-[450px] bg-no-repeat bg-cover bg-center bg-opacity-50 bg-black bg-[url('../assets/images/banner.jpg')]">
       <div className="h-[450px] absolute inset-0 mt-[87px] bg-black opacity-50" />
       <div className="flex flex-col items-center gap-6 z-10 text-center">
         <h1 className="text-white font-bold">
