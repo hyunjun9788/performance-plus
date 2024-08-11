@@ -9,9 +9,9 @@ const TitleContainer = ({
   children,
 }: PropsWithChildren<TitleContainerProps>) => {
   return (
-    <div className="w-full h-[120px] flex flex-col justify-center gap-1 px-6 py-7 rounded-lg bg-gray-1e text-white">
-      <div className="text-xl font-bold text-main">{title}</div>
-      <p className="text-[14px]">{children}</p>
+    <div className="w-full h-36 flex flex-col justify-center gap-1 px-6 py-7 rounded-lg bg-gray-1e text-white">
+      <div className="text-2xl font-bold text-main">{title}</div>
+      <p className="text-base]">{children}</p>
     </div>
   );
 };

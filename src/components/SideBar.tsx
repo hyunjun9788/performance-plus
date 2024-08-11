@@ -24,9 +24,24 @@ const SideBar = () => {
       title: '공연 정보',
       items: [
         { id: 1, icon: 'HomeIcon', text: '홈', path: '/' },
-        { id: 2, icon: 'MusicIcon', text: '콘서트', path: '/concert' },
-        { id: 3, icon: 'MusicalIcon', text: '뮤지컬', path: '/musical' },
-        { id: 4, icon: 'PlayIcon', text: '연극', path: '/play' },
+        {
+          id: 2,
+          icon: 'MusicIcon',
+          text: '콘서트',
+          path: '/performance-info/concert',
+        },
+        {
+          id: 3,
+          icon: 'MusicalIcon',
+          text: '뮤지컬',
+          path: '/performance-info/musical',
+        },
+        {
+          id: 4,
+          icon: 'PlayIcon',
+          text: '연극',
+          path: '/performance-info/play',
+        },
       ],
     },
     {
