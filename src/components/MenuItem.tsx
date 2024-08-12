@@ -15,10 +15,10 @@ const MenuItem = ({ icon, text, path, isClicked }: MenuItemProps) => {
     <li className="hover:bg-gray-36 rounded-lg duration-150">
       <Link
         href={path}
-        className={`w-full flex items-center px-3 py-2 gap-4 rounded-lg ${clickedMenuStyle} $`}
+        className={`w-full flex items-center px-3 py-3 gap-4 rounded-lg ${clickedMenuStyle} $`}
       >
         <Icon name={icon} className="fill-gray-97 w-[20px]" />
-        <span>{text}</span>
+        <span className="leading-[2px]">{text}</span>
       </Link>
     </li>
   );
