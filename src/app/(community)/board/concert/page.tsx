@@ -1,4 +1,4 @@
 const ConcertBoard = () => {
-  return <div>dd</div>;
+  return <></>;
 };
 export default ConcertBoard;
