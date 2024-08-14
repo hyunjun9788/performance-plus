@@ -76,7 +76,11 @@ const SideBar = () => {
                       icon={item.icon}
                       text={item.text}
                       path={item.path}
-                      isClicked={pathname === item.path}
+                      isClicked={
+                        pathname === item.path ||
+                        (item.path === '/board' &&
+                          pathname.startsWith('/board'))
+                      }
                     />
                   ))}
                 </ul>
