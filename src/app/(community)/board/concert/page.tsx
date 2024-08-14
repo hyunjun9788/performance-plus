@@ -1,4 +1,6 @@
+import Board from '@/components/community/Board';
+
 const ConcertBoard = () => {
-  return <></>;
+  return <Board />;
 };
 export default ConcertBoard;

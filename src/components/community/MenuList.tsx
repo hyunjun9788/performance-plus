@@ -18,7 +18,7 @@ const MenuList = () => {
             key={v.label}
             className={`relative flex items-center ${
               index !== 0
-                ? "before:content-['|'] before:pr-[1.3rem] before:text-gray-bf before:font-normal"
+                ? "before:content-['|'] before:pr-[1.3rem] before:text-gray-bf before:font-normal pl-[1.3rem]"
                 : ''
             } ${activeSegment === v.label ? 'text-main font-bold' : ''}`}
           >

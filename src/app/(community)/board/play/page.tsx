@@ -1,4 +1,6 @@
+import Board from '@/components/community/Board';
+
 const PlayBoard = () => {
-  return <div>dd</div>;
+  return <Board />;
 };
 export default PlayBoard;
