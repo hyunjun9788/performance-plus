@@ -8,7 +8,9 @@ export type IconType =
   | 'SearchIcon'
   | 'PlayIcon'
   | 'MusicalIcon'
-  | 'MapIcon';
+  | 'MapIcon'
+  | 'LeftIcon'
+  | 'RightIcon';
 
 export interface IconProps {
   name: IconType;
