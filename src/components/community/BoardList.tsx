@@ -14,7 +14,7 @@ const BoardList = () => {
             <div>닉네임</div>
             <div>2024-07-31</div>
             <div>조회수</div>
-            <div className="flex">
+            <div className="flex gap-1">
               <Icon name="ReviewIcon" className="w-3 fill-gray-97" />
               <div>3</div>
             </div>
@@ -23,7 +23,7 @@ const BoardList = () => {
       </div>
       <div className="flex gap-2 items-center">
         <Icon name="BoardIcon" className="w-4 fill-gray-97" />
-        <div className="text-red-500">3</div>
+        <div className="text-main">3</div>
       </div>
     </li>
   );

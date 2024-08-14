@@ -3,6 +3,7 @@ import Link from 'next/link';
 import BoardList from './BoardList';
 import { Icon } from '../common/Icon';
 import Button, { ButtonKind } from '../common/Button';
+import BoardPages from './BoardPages';
 
 const Board = () => {
   // const [currentPage, setCurrentPage] = useState<number>(1);
@@ -10,7 +11,7 @@ const Board = () => {
   // const offset = (currentPage - 1) * limit;
   // const totalDatas = DATA.length;
   // let numPages. = Math.ceil(totalDatas / 10);
-  // const pages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const pages = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   // const firstPageNum = currentPage - ((currentPage - 1) % 10);
   // let lastPageNum = firstNum + 9;
 
@@ -56,36 +57,7 @@ const Board = () => {
           <li>
             <Icon name="LeftIcon" className="w-[13px] fill-white" />
           </li>
-          <li>
-            <Link href="/board?page=1">1</Link>
-          </li>
-          <li>
-            <Link href="/board?page=2">2</Link>
-          </li>
-          <li>
-            <Link href="/board?page=3">3</Link>
-          </li>
-          <li>
-            <Link href="/board?page=4">4</Link>
-          </li>
-          <li>
-            <Link href="/board?page=5">5</Link>
-          </li>
-          <li>
-            <Link href="/board?page=6">6</Link>
-          </li>
-          <li>
-            <Link href="/board?page=7">7</Link>
-          </li>
-          <li>
-            <Link href="/board?page=8">8</Link>
-          </li>
-          <li>
-            <Link href="/board?page=9">9</Link>
-          </li>
-          <li>
-            <Link href="/board?page=10">10</Link>
-          </li>
+          <BoardPages pages={pages} />
           <li>
             <Icon name="RightIcon" className="w-[13px] fill-white" />
           </li>
