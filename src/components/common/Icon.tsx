@@ -1,12 +1,12 @@
 import { IconProps, IconType } from '@/types/iconType';
-import HomeIcon from '../../../public/house-solid.svg';
-import BoardIcon from '../../../public/comment-solid.svg';
-import SearchIcon from '../../../public/magnifying-glass-solid.svg';
-import MusicIcon from '../../../public/music-solid.svg';
-import ReviewIcon from '../../../public/pen-solid.svg';
-import MusicalIcon from '../../../public/people-pulling-solid.svg';
-import PlayIcon from '../../../public/people-roof-solid.svg';
-import MapIcon from '../../../public/map-solid.svg';
+import HomeIcon from '../../../public/svg/house-solid.svg';
+import BoardIcon from '../../../public/svg/comment-solid.svg';
+import SearchIcon from '../../../public/svg/magnifying-glass-solid.svg';
+import MusicIcon from '../../../public/svg/music-solid.svg';
+import ReviewIcon from '../../../public/svg/pen-solid.svg';
+import MusicalIcon from '../../../public/svg/people-pulling-solid.svg';
+import PlayIcon from '../../../public/svg/people-roof-solid.svg';
+import MapIcon from '../../../public/svg/map-solid.svg';
 
 export const iconTypes: Record<
   IconType,
