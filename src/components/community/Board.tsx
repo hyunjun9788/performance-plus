@@ -1,9 +1,9 @@
-import Link from 'next/link';
 // import { useState } from 'react';
 import BoardList from './BoardList';
 import { Icon } from '../common/Icon';
-import Button, { ButtonKind } from '../common/Button';
 import BoardPages from './BoardPages';
+import { usePathname } from 'next/navigation';
+import WriteButtonBox from './WriteButtonBox';
 
 const Board = () => {
   // const [currentPage, setCurrentPage] = useState<number>(1);
@@ -47,11 +47,7 @@ const Board = () => {
         <BoardList />
         <BoardList />
       </ul>
-      <div className="relative">
-        <Link href="/write" className="absolute right-0 top-4 ">
-          <Button kind={ButtonKind.tertiary}>글쓰기</Button>
-        </Link>
-      </div>
+      <WriteButtonBox />
       <nav className="relative flex justify-center text-white">
         <ul className="absolute top-6 flex items-center gap-2">
           <li>
