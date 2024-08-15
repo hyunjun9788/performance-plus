@@ -59,6 +59,12 @@ const SideBar = () => {
     },
   ];
 
+  const isPathActive = (basePath: string) => {
+    if (basePath === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(basePath);
+  };
   return (
     <>
       <div>
@@ -76,11 +82,7 @@ const SideBar = () => {
                       icon={item.icon}
                       text={item.text}
                       path={item.path}
-                      isClicked={
-                        pathname === item.path ||
-                        (item.path === '/board' &&
-                          pathname.startsWith('/board'))
-                      }
+                      isClicked={isPathActive(item.path)}
                     />
                   ))}
                 </ul>

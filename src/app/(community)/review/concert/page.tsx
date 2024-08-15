@@ -1,7 +1,6 @@
 import Board from '@/components/community/Board';
 
-function Review() {
+const MusicalReview = () => {
   return <Board />;
-}
-
-export default Review;
+};
+export default MusicalReview;

@@ -1,12 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import { useSelectedLayoutSegment } from 'next/navigation';
+import { usePathname, useSelectedLayoutSegment } from 'next/navigation';
 
 const MenuList = () => {
   const activeSegment = useSelectedLayoutSegment();
+  const pathname = usePathname();
+  console.log(pathname);
   const BOARD_MENU = [
-    { label: 'concert', menu: '콘서트', path: '/board/concert' },
+    { label: 'concert', menu: '콘서트', path: `${pathname}/concert` },
     { label: 'musical', menu: '뮤지컬', path: '/board/musical' },
     { label: 'play', menu: '연극', path: '/board/play' },
   ];
