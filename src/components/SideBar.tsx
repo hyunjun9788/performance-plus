@@ -47,8 +47,18 @@ const SideBar = () => {
     {
       title: '커뮤니티',
       items: [
-        { id: 5, icon: 'ReviewIcon', text: '공연 후기', path: '/review' },
-        { id: 6, icon: 'BoardIcon', text: '자유게시판', path: '/board' },
+        {
+          id: 5,
+          icon: 'ReviewIcon',
+          text: '공연 후기',
+          path: '/review?type=all',
+        },
+        {
+          id: 6,
+          icon: 'BoardIcon',
+          text: '자유게시판',
+          path: '/board?type=all',
+        },
       ],
     },
     {

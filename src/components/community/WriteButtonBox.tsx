@@ -2,14 +2,18 @@
 
 import Link from 'next/link';
 import Button, { ButtonKind } from '../common/Button';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 const WriteButtonBox = () => {
   const pathname = usePathname();
-
+  const searchParams = useSearchParams();
+  const type = searchParams?.get('type');
   return (
     <div className="relative">
-      <Link href={`/write/${pathname}`} className="absolute right-0 top-4 ">
+      <Link
+        href={`/write/${pathname}?type=${type}`}
+        className="absolute right-0 top-4 "
+      >
         <Button kind={ButtonKind.tertiary}>글쓰기</Button>
       </Link>
     </div>

@@ -13,7 +13,7 @@ const typeClasses: Record<ImageProps['type'], string> = {
   music:
     'relative w-full h-full aspect-[251/398] brightness-100 group-hover:brightness-75',
   board: 'relative w-[60px] h-[60px]',
-  profile: 'relative w-[40px] h-[40px] rounded-full overflow-hidden',
+  profile: 'relative min-w-[40px] h-[40px] rounded-full overflow-hidden',
 };
 
 const ImageComponent = ({ type, src }: ImageProps) => {

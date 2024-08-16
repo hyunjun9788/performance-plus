@@ -1,5 +1,8 @@
+import CommentList from '@/components/comment/CommentList';
+import CommentTextarea from '@/components/comment/CommentTextarea';
+import { Icon } from '@/components/common/Icon';
 import ImageComponent from '@/components/common/ImageComponent';
-import CommentBox from '@/components/community/CommentBox';
+import HeartAndCommentCountBox from '@/components/community/HeartAndCommentCountBox';
 
 const BoardDetailPage = () => {
   return (
@@ -21,8 +24,10 @@ const BoardDetailPage = () => {
           </div>
         </div>
       </div>
-      <div className="min-h-[800px] text-white">너무 재밌었어요!</div>
-      <CommentBox />
+      <div className="min-h-[600px] text-white">너무 재밌었어요!</div>
+      <HeartAndCommentCountBox />
+      <CommentTextarea />
+      <CommentList />
     </div>
   );
 };

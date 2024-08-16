@@ -1,16 +1,25 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname, useSelectedLayoutSegment } from 'next/navigation';
+import {
+  usePathname,
+  useSearchParams,
+  useSelectedLayoutSegment,
+} from 'next/navigation';
 
 const MenuList = () => {
-  const activeSegment = useSelectedLayoutSegment();
+  const searchParams = useSearchParams();
+  const type = searchParams?.get('type');
   const pathname = usePathname();
   console.log(pathname);
   const BOARD_MENU = [
-    { label: 'concert', menu: '콘서트', path: `${pathname}/concert` },
-    { label: 'musical', menu: '뮤지컬', path: '/board/musical' },
-    { label: 'play', menu: '연극', path: '/board/play' },
+    {
+      label: 'concert',
+      menu: '콘서트',
+      searchParams: `type=concert`,
+    },
+    { label: 'musical', menu: '뮤지컬', searchParams: 'type=musical' },
+    { label: 'play', menu: '연극', searchParams: 'type=play' },
   ];
   return (
     <ul className="text-gray-bf flex justify-between list-none">
@@ -22,9 +31,9 @@ const MenuList = () => {
               index !== 0
                 ? "before:content-['|'] before:pr-[1.3rem] before:text-gray-bf before:font-normal pl-[1.3rem]"
                 : ''
-            } ${activeSegment === v.label ? 'text-main font-bold' : ''}`}
+            } ${type === v.label ? 'text-main font-bold' : ''}`}
           >
-            <Link href={v.path}>
+            <Link href={`${pathname}?${v.searchParams}`}>
               <span>{v.menu}</span>
             </Link>
           </li>

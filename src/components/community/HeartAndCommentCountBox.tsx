@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Icon } from '../common/Icon';
 
-const CommentBox = () => {
+const HeartAndCommentCountBox = () => {
   const [isClickedHeart, setIsClickedHeart] = useState(false);
   const handleClickHeart = () => {
     setIsClickedHeart(!isClickedHeart);
@@ -25,4 +25,4 @@ const CommentBox = () => {
     </div>
   );
 };
-export default CommentBox;
+export default HeartAndCommentCountBox;

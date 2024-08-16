@@ -11,6 +11,7 @@ import LeftIcon from '../../../public/svg/left.svg';
 import RightIcon from '../../../public/svg/right.svg';
 import HeartIcon from '../../../public/svg/heart.svg';
 import CommentIcon from '../../../public/svg/comment-nocolor.svg';
+import ImageIcon from '../../../public/svg/image.svg';
 
 export const iconTypes: Record<
   IconType,
@@ -28,6 +29,7 @@ export const iconTypes: Record<
   LeftIcon,
   HeartIcon,
   CommentIcon,
+  ImageIcon,
 };
 
 export const Icon = ({ name, className, onClick }: IconProps) => {
