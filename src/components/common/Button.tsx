@@ -17,9 +17,7 @@ export const buttonStyle = {
     button: 'py-2 px-5 bg-gray-1e text-main rounded-lg hover:bg-gray-36',
   },
   [ButtonKind.tertiary]: {
-    button:
-      'bg-transparent border border-solid border-gray-9F disabled:border-gray-35',
-    p: 'text-gray-9F group-disabled:text-gray-6E',
+    button: 'px-4 py-2 text-white border border-white',
   },
 };
 

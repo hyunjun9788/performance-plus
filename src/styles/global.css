@@ -153,5 +153,19 @@ iframe {
   font-size: 14px;
 }
 
+.ck-editor__editable {
+  background-color: black !important;
+  min-height: 30rem;
+  color: white;
+  /* border: 1px solid black; */
+  border-bottom: 1px solid white !important;
+}
+.ck-editor__editable.ck-blurred,
+.ck-editor__editable.ck-focused {
+  border: none !important;
+  border-bottom: 1px solid white !important;
+  box-shadow: none;
+}
+
 @tailwind components;
 @tailwind utilities;

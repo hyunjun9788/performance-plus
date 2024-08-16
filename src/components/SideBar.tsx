@@ -18,22 +18,47 @@ interface MenuSection {
 
 const SideBar = () => {
   const pathname = usePathname();
-
+  console.log(pathname);
   const menuSections: MenuSection[] = [
+    { title: '', items: [{ id: 1, icon: 'HomeIcon', text: '홈', path: '/' }] },
     {
       title: '공연 정보',
       items: [
-        { id: 1, icon: 'HomeIcon', text: '홈', path: '/' },
-        { id: 2, icon: 'MusicIcon', text: '콘서트', path: '/concert' },
-        { id: 3, icon: 'MusicalIcon', text: '뮤지컬', path: '/musical' },
-        { id: 4, icon: 'PlayIcon', text: '연극', path: '/play' },
+        {
+          id: 2,
+          icon: 'MusicIcon',
+          text: '콘서트',
+          path: '/concert',
+        },
+        {
+          id: 3,
+          icon: 'MusicalIcon',
+          text: '뮤지컬',
+          path: '/musical',
+        },
+        {
+          id: 4,
+          icon: 'PlayIcon',
+          text: '연극',
+          path: '/play',
+        },
       ],
     },
     {
       title: '커뮤니티',
       items: [
-        { id: 5, icon: 'ReviewIcon', text: '공연 후기', path: '/review' },
-        { id: 6, icon: 'BoardIcon', text: '자유게시판', path: '/board' },
+        {
+          id: 5,
+          icon: 'ReviewIcon',
+          text: '공연 후기',
+          path: '/review',
+        },
+        {
+          id: 6,
+          icon: 'BoardIcon',
+          text: '자유게시판',
+          path: '/board',
+        },
       ],
     },
     {
@@ -44,6 +69,12 @@ const SideBar = () => {
     },
   ];
 
+  const isPathActive = (basePath: string) => {
+    if (basePath === '/') {
+      return pathname === '/';
+    }
+    return pathname.startsWith(basePath);
+  };
   return (
     <>
       <div>
@@ -61,7 +92,7 @@ const SideBar = () => {
                       icon={item.icon}
                       text={item.text}
                       path={item.path}
-                      isClicked={pathname === item.path}
+                      isClicked={isPathActive(item.path)}
                     />
                   ))}
                 </ul>
