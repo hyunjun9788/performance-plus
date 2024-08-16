@@ -18,7 +18,7 @@ interface MenuSection {
 
 const SideBar = () => {
   const pathname = usePathname();
-
+  console.log(pathname);
   const menuSections: MenuSection[] = [
     { title: '', items: [{ id: 1, icon: 'HomeIcon', text: '홈', path: '/' }] },
     {
@@ -51,13 +51,13 @@ const SideBar = () => {
           id: 5,
           icon: 'ReviewIcon',
           text: '공연 후기',
-          path: '/review?type=all',
+          path: '/review',
         },
         {
           id: 6,
           icon: 'BoardIcon',
           text: '자유게시판',
-          path: '/board?type=all',
+          path: '/board',
         },
       ],
     },

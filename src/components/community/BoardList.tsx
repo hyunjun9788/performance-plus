@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Icon } from '../common/Icon';
 import ImageComponent from '../common/ImageComponent';
 
@@ -8,7 +9,9 @@ const BoardList = () => {
         <ImageComponent type="board" src="http://via.placeholder.com/180x244" />
         <div className="flex flex-col justify-between text-white">
           <div className="max-w-[500px] text-white truncate">
-            [부산공연/무료] 8월 해질녘 콘서트 - 여름의 끝 by 겸(GYE0M)
+            <Link href={`/detail/${4}`}>
+              [부산공연/무료] 8월 해질녘 콘서트 - 여름의 끝 by 겸(GYE0M)
+            </Link>
           </div>
           <div className="flex gap-2">
             <div>닉네임</div>
