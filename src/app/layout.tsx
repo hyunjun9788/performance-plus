@@ -19,8 +19,10 @@ const pretendard = localFont({
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="ko" className={pretendard.className}>
@@ -29,6 +31,7 @@ export default function RootLayout({
           <Gnb />
           <SideBar />
           {children}
+          {modal}
         </RecoilRootWrapper>
       </body>
     </html>

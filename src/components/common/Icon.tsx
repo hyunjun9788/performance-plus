@@ -12,6 +12,8 @@ import RightIcon from '../../../public/svg/right.svg';
 import HeartIcon from '../../../public/svg/heart.svg';
 import CommentIcon from '../../../public/svg/comment-nocolor.svg';
 import ImageIcon from '../../../public/svg/image.svg';
+import CloseIcon from '../../../public/svg/close.svg';
+import GoogleIcon from '../../../public/svg/google.svg';
 
 export const iconTypes: Record<
   IconType,
@@ -30,6 +32,8 @@ export const iconTypes: Record<
   HeartIcon,
   CommentIcon,
   ImageIcon,
+  CloseIcon,
+  GoogleIcon,
 };
 
 export const Icon = ({ name, className, onClick }: IconProps) => {

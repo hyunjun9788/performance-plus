@@ -13,7 +13,9 @@ export type IconType =
   | 'RightIcon'
   | 'HeartIcon'
   | 'CommentIcon'
-  | 'ImageIcon';
+  | 'ImageIcon'
+  | 'CloseIcon'
+  | 'GoogleIcon';
 
 export interface IconProps {
   name: IconType;

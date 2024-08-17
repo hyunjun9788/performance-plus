@@ -10,12 +10,14 @@ const Gnb = () => {
             <Image width={130} height={55} src="/logo.png" alt="로고 이미지" />
           </Link>
         </div>
-        <button
-          type="button"
-          className="px-4 py-[6px] border border-white rounded-lg text-white"
-        >
-          로그인
-        </button>
+        <Link href={'/login'}>
+          <button
+            type="button"
+            className="px-4 py-[6px] border border-white rounded-lg text-white"
+          >
+            로그인
+          </button>
+        </Link>
       </div>
     </header>
   );
